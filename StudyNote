@@ -1,0 +1,30 @@
+I
+对于XPath的基础部分是路径的选择，这可以帮助我们在页面中快速的定位：
+
+常用的操作符号：
+    A. /   从根节点选取。
+    B. //  从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。
+    C. .   选取当前节点。
+    D. ..  选取当前节点的父节点。
+    E. @   选取属性。
+操作实例：
+    操作的一个.xml 文档内容如下：
+    <?xml version="1.0" encoding="ISO-8859-1"?>
+      <bookstore>
+        <book>
+          <title lang="eng">Harry Potter</title>
+          <price>29.99</price>
+        </book>
+        <book>
+          <title lang="eng">Learning XML</title>
+          <price>39.95</price>
+        </book>
+      </bookstore>
+    操作实例如下：
+    bookstore       选取 bookstore 元素的所有子节点。
+    /bookstore      选取根元素 bookstore。  注释：假如路径起始于正斜杠( / )，则此路径始终代表到某元素的绝对路径！
+    bookstore/book  选取属于 bookstore 的子元素的所有 book 元素。
+    //book          选取所有 book 子元素，而不管它们在文档中的位置。
+    bookstore//book 选择属于 bookstore 元素的后代的所有 book 元素，而不管它们位于 bookstore 之下的什么位置。
+    //@lang         选取名为 lang 的所有属性。
+II
